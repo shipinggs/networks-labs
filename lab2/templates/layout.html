@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Second Networks Lab</title>
+    {% endblock %}
+  </head>
+  <body>
+    <header>
+      <h1>3 Little Pigs</h1>
+      <ul class="navigation">
+        <li>
+          <a href='/'>
+            Dock
+          </a>
+        </li>
+        <li>
+          <a href='/first'>
+            First Pig
+          </a>
+        </li>
+        <li>
+          <a href='/second'>
+            Second Pig
+          </a>
+        </li>
+        <li>
+          <a href='/third'>
+            Third Pig
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <div id="content">{% block content %}{% endblock %}</div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+    background: grey;
+    color: white;
+}
+
+.navigation {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation > li {
+    display: inline-block;
+    margin: 0 6px;
+}
+
+.navigation > li > a {
+    color: #B2EBF2;
+}
