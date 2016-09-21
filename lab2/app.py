@@ -2,11 +2,8 @@ import requests
 from flask import Flask, render_template, request, flash
 from forms import ContactForm
 
-from wtforms import TextField
-
 app = Flask(__name__)
 app.secret_key = 'development key'
-
 
 @app.route('/')
 def index():
@@ -16,7 +13,6 @@ def index():
 def first():
     r = requests.get('https://api.github.com/zen').text
     return render_template('first.html', zen = r)
-
 
 @app.route('/second')
 def second():
