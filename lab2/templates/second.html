@@ -4,7 +4,7 @@
   <h3>The second pig is a polite pig.</h3>
 
   <form action = "http://localhost:5000/second" method ="POST">
-        <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+        <div>
            {{ form.name.label(class_='second-pig__form-label') }}
            {{ form.name(class_='second-pig__form-textfield') }}
            {{ form.submit(class_='second-pig__form-submit') }}
@@ -23,5 +23,5 @@
     Hello {{ form.name.data }}, have a nice day.
     {% endif %}
   </h2>
-  
+
 {% endblock %}
