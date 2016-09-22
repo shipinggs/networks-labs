@@ -11,8 +11,8 @@ def index():
 
 @app.route('/first')
 def first():
-    r = requests.get('https://api.github.com/zen').text
-    return render_template('first.html', zen = r)
+    zen = requests.get('https://api.github.com/zen').text
+    return render_template('first.html', zen = zen)
 
 @app.route('/second', methods = ['GET', 'POST'])
 def second():
