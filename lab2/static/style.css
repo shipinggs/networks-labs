@@ -18,3 +18,23 @@ body {
 .navigation > li > a {
     color: #B2EBF2;
 }
+
+.second-pig__form-label {
+    display: block;
+    margin: 6px auto;
+    padding: none;
+}
+
+.second-pig__form-textfield {
+    display: inline-block;
+    margin: 4px auto;
+    padding: none;
+    width: 140px;
+}
+
+.second-pig__form-submit {
+    display: inline-block;
+    margin: 4px auto;
+    padding: none;
+    width: 80px;
+}

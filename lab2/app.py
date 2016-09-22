@@ -14,27 +14,22 @@ def first():
     r = requests.get('https://api.github.com/zen').text
     return render_template('first.html', zen = r)
 
-@app.route('/second')
+@app.route('/second', methods = ['GET', 'POST'])
 def second():
-    return render_template('second.html', question = question)
-
-@app.route('/third')
-def third():
-    return render_template('third.html')
-
-@app.route('/contact', methods = ['GET', 'POST'])
-def contact():
     form = ContactForm()
 
     if request.method == 'POST':
         if form.validate() == False:
             flash('All fields are required.')
-            return render_template('contact.html', form = form)
+            return render_template('second.html', form = form)
         else:
             return render_template('success.html')
     elif request.method == 'GET':
-         return render_template('contact.html', form = form)
+         return render_template('second.html', form = form)
 
+@app.route('/third')
+def third():
+    return render_template('third.html')
 
 @app.route('/hello/<name>')
 def hello(name):

@@ -1,7 +1,25 @@
 {% extends "layout.html" %}
+
 {% block content %}
   <h3>The second pig is a polite pig.</h3>
-  {{ question }}
+  <h2>
+    {% if not form.name.data %}
+    &nbsp;
+    {% else %}
+    Hello {{ form.name.data }}, have a nice day.
+    {% endif %}
+  </h2>
 
-
+  <form action = "http://localhost:5000/second" method ="POST">
+        <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+           {{ form.name.label(class_='second-pig__form-label') }}
+           {{ form.name(class_='second-pig__form-textfield') }}
+           {{ form.submit(class_='second-pig__form-submit') }}
+        </div>
+  </form>
+  <p>
+    {% for message in form.name.errors %}
+       <div>{{ message }}</div>
+    {% endfor %}
+  </p>
 {% endblock %}
