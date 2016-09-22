@@ -10,12 +10,12 @@ body {
     list-style: none;
 }
 
-.navigation > li {
+.navigation__list-item {
     display: inline-block;
     margin: 0 6px;
 }
 
-.navigation > li > a {
+.navigation__list-item-link {
     color: #B2EBF2;
 }
 
