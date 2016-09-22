@@ -1,12 +1,13 @@
 body {
-    padding: 0 14px;
+    padding: 8px 14px;
     text-align: center;
-    background: grey;
+    background: #37474F;
     color: white;
 }
 
 .navigation {
     margin: 0 auto;
+    margin-bottom: 32px;
     padding: 0;
     list-style: none;
 }
@@ -39,4 +40,21 @@ body {
     margin: 4px auto;
     padding: none;
     width: 80px;
+}
+
+.third-pig__pig-text {
+    display: block;
+    margin: 0 auto;
+    max-width: 520px;
+    width: 66%;
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: 8px 0;
+    }
+
+    .third-pig__pig-text {
+        width: 88%;
+    }
 }
