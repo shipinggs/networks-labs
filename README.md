@@ -8,3 +8,6 @@ To learn more about HTTP request/response handling, and familiarize with Flask, 
 
 ### Lab 3:
 Building our own RESTful API.
+
+### Lab 4:
+Experiment with buffer sizes, network scheduling, and TCP congestion window. To understand why larger buffers may be disadvantageous.
